@@ -1,0 +1,55 @@
+class Main {
+    public static void main(String[] args) {
+     int str1=22032025;
+     int a;
+     if(str1<1000000){
+        a=str1/100000%10;
+     }
+     else{
+       a=str1/1000000%100;
+     }
+     System.out.println(a);
+     int d=str1/10000%100;
+     int e=str1%10000;
+   
+     int str2=22032028;
+     int l;
+     if(str2<1000000){
+        l=str2/100000%10;
+     }
+     else{
+        l=str2/1000000%100;
+     }
+     System.out.println(a);
+     int o=str2/10000%100;
+     int n=str2%10000;
+     int c=e+n;
+     int[] m={31,28,31,30,31,30,31,31,30,31,30,31};
+     if ((e % 4 == 0 && e % 100 != 0) || (e % 400 == 0)) {
+        m[1] = 29;  
+     }
+     int montdays=0;
+     for(int i=0;i<=o-2;i++){
+         montdays=montdays+m[i];
+     }
+     System.out.println(365-(a+montdays));
+     int[] m1={31,28,31,30,31,30,31,31,30,31,30,31};
+     if ((n % 4 == 0 && n % 100 != 0) || (n % 400 == 0)) {
+        m1[1] = 29;  
+     }
+     int montdays2=0;
+     for(int i=0;i<=d-1;i++){
+         montdays2=montdays2+m[i];
+     }
+     System.out.println((o+montdays2));  
+       
+       
+       
+       
+       
+       
+       
+       
+        System.out.println("Try programiz.pro");
+    }
+}
